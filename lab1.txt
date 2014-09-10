@@ -1,0 +1,92 @@
+Zachary Vencius Lab1 Csci3308
+
+
+Command    Does What?
+
+
+
+date       ->   shows current date, time, and timezone
+
+ls -ltr    ->   lists the content of the directory in longlisting, time stamped in reversed order
+
+cd ..      ->   moves to parent of current directory
+
+pwd        ->   outputs path of current working directory
+
+who        ->   shows info on currently logged in users
+
+whoami     ->   prints effective userid
+
+man man    ->   displays info about the man command
+
+
+
+Basic Linux Commands
+
+
+
+mkdir cs3308 -> Make a directory named "cs3308" and move into that directory
+
+mv cs3308 csci 3308 -> Rename your directory 'cs3308' to 'csci3308'
+
+cd -> Change to the root directory
+
+cp firstfile secondfile -> Make a copy of a file
+
+rm secondfile -> Delete the copy of your file
+
+1st command, mkdir tmp. 2nd command, rm -rf tmp -> Make a directory named tmp. Then delete that directory
+
+cat filename -> View the contents of a file
+
+less filename -> 2nd way to view the contents of a file
+
+head -c filename  (c is number of lines) -> View just the beginning of a file
+
+tail -c filename  (c is number of lines) -> View just the end of a file
+
+grep -Ril the -> List all files that contain the word "the" in the file
+
+find books.txt -> List full path to all files named 'books.txt'
+
+zip -r dir.zip directoryname -> Zip the contents in your directory into a file named 'dir.zip'
+
+tar -cvzf dir.tgz directory/ -> Tar the contents in your directory into a file named 'dir.tar'
+
+unzip dir.zip -d tmp -> Untar your zipped file 'dir.tar' into a new directory named 'tmp'
+
+touch filename -> Modify a file's last modified timestamp to now. This also creates a new file if it doesn't currently exist
+
+
+
+Advanced Linux Commands
+
+
+sort -t ':' -k1,1 /etc/passwd -> Sort the file based on the userid (first field)
+
+sort -n -t ':' -k3,3 /etc/passwd  ->  Sort the file based on the UID
+
+sort -n -t ':' -k4,4 /etc/passwd | sort -n -t ':' -k3,3 /etc/passwd -> sort first based on GID then on UID
+
+grep -wn "Marx" /etc/passwd -> show all lines with "Marx" in it
+
+wc -l file.txt -> count the number of lines in file.txt
+
+awk -d : -f1 /etc/passwd -> print just the usernames
+
+awk -d : -f4 /etc/passwd | uniq -> print a unique list of GIDs
+
+awk -d : -f4 /etc/passwd | > tmp -> answer from previous question and redirect to file named tmp
+
+?
+
+
+
+
+
+
+
+
+
+
+
